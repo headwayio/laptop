@@ -144,6 +144,8 @@ brew cask install alfred
 brew cask install appcleaner
 brew cask install google-chrome
 brew cask install iterm2
+brew cask install karabiner
+brew cask install slack
 
 fancy_echo "Installing and configuring RVM ..."
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
