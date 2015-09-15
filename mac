@@ -39,7 +39,6 @@ if [ ! -f "$HOME/.zshrc" ]; then
   touch "$HOME/.zshrc"
 fi
 
-# shellcheck disable=SC2016
 append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
 
 case "$SHELL" in
@@ -137,6 +136,14 @@ brew_install_or_upgrade 'imagemagick'
 brew_install_or_upgrade 'qt'
 brew_install_or_upgrade 'hub'
 brew_install_or_upgrade 'node'
+
+fancy_echo "Installing applications ..."
+brew install caskroom/cask/brew-cask
+brew cask install 1password
+brew cask install alfred
+brew cask install appcleaner
+brew cask install google-chrome
+brew cask install iterm2
 
 fancy_echo "Installing and configuring RVM ..."
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
